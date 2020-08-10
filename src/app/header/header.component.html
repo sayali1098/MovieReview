@@ -1,0 +1,52 @@
+<div class="main-container">
+  <h1 class="title">Movie Review</h1>
+  <div class="top">
+    <button class="cat" mat-button [matMenuTriggerFor]="menu">
+      Categories
+    </button>
+    <mat-menu #menu="matMenu">
+      <button class="item" (click)="setValue('Thriller')" mat-menu-item>
+        Thriller
+      </button>
+      <button class="item" (click)="setValue('Action')" mat-menu-item>
+        Action
+      </button>
+      <button class="item" (click)="setValue('Horror')" mat-menu-item>
+        Horror
+      </button>
+      <button class="item" (click)="setValue('Comedy')" mat-menu-item>
+        Comedy
+      </button>
+      <button class="item" (click)="setValue('Romance')" mat-menu-item>
+        Romance
+      </button>
+      <button class="item" (click)="setValue('Drama')" mat-menu-item>
+        Drama
+      </button>
+      <button class="item" (click)="setValue('Crime')" mat-menu-item>
+        Crime
+      </button>
+      <button class="item" (click)="setValue('Science Fiction')" mat-menu-item>
+        Science Fiction
+      </button>
+      <button class="item" (click)="setValue('Animation')" mat-menu-item>
+        Animation
+      </button>
+      <button class="item" (click)="setValue('Family')" mat-menu-item>
+        Family
+      </button>
+      <button class="item" (click)="setValue('Mystery')" mat-menu-item>
+        Mystery
+      </button>
+    </mat-menu>
+  </div>
+  <form class="search-container">
+    <input
+      id="ipSearch"
+      type="text"
+      name="search"
+      placeholder="Search..."
+      [(ngModel)]="searchText"
+    />
+  </form>
+</div>
